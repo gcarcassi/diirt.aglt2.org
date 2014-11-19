@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/webpods-client.js"></script>
+
+        <script>
+            var wsUri = "ws://diirt.aglt2.org/web-pods/socket";
+            var wp = new Client(wsUri);
+        </script>
+        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/widgets/bubble.js"></script>
+
+        <title></title>
+    </head>
+    <body>
+        <h1>UM host info from Ganglia</h1>
+        <div id="series_chart_div" class="bubble-graph" data-channel="UM/ganglia"
+             data-x-column="load_fifteen" data-y-column="cpu_wio" data-color-column="host"
+             style="width: 640px; height: 480px;"></div>
+    </body>
+</html>
