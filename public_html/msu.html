@@ -54,9 +54,23 @@
     </div>
 
     <div id="msu-jobs" class="container starter-template">
-        <h1>MSU jobs (Condor info)</h1>
-        <div id="msu-condor_chart_div" class="bubble-graph" data-channel="MSU/condor"
+        <h1>MSU jobs (Condor + Ganglia info)</h1>
+        <div id="job_chart_div" class="bubble-graph" data-channel="MSU/jobs"
              data-x-column="wall" data-y-column="cpu" data-color-column="queue"
+             style="height: 480px;"></div>
+    </div>
+
+    <div id="msu-condor" class="container starter-template">
+        <h1>MSU jobs (Condor info)</h1>
+        <div id="job_chart_div" class="bubble-graph" data-channel="MSU/condor"
+             data-x-column="wall" data-y-column="cpu" data-color-column="queue"
+             style="height: 480px;"></div>
+    </div>
+
+    <div id="msu-hosts" class="container starter-template">
+        <h1>MSU hosts (Ganglia info)</h1>
+        <div id="ganglia_chart_div" class="bubble-graph" data-channel="MSU/ganglia"
+             data-x-column="load_fifteen" data-y-column="cpu_wio" data-color-column="host"
              style="height: 480px;"></div>
     </div>
 
