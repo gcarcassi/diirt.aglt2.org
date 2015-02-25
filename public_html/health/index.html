@@ -7,23 +7,29 @@
 
         <title>AGLT2 monitoring pages</title>
 
-        <!-- Bootstrap core CSS -->
+        <!-- Bootstrap -->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-        <!-- Custom styles for this template -->
-        <link href="../stylesheet.css" rel="stylesheet">
-
+        <!-- JQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        
+        <!-- WebPODS and dependencies -->
         <script type="text/javascript" src="//www.google.com/jsapi"></script>
         <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/webpods-client.js"></script>
+        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/widgets/wp-led.js"></script>
+        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/widgets/wp-bubble-graph.js"></script>
+        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/widgets/wp-table.js"></script>
+        <link rel="stylesheet" href="//diirt.aglt2.org/web-pods/js/widgets/wp-led.css">
+        <link rel="stylesheet" href="//diirt.aglt2.org/web-pods/js/widgets/wp-table.css">
 
         <script>
             var wsUri = "ws://diirt.aglt2.org/web-pods/socket";
             var wp = new Client(wsUri);
         </script>
-
+        
+        <link href="../stylesheet.css" rel="stylesheet">
 
     </head>
 
@@ -53,20 +59,11 @@
 
         <div id="msu-jobs" class="container starter-template">
             <h1>Basic channel status</h1>
-            <p><a href="umCondor.html">UM/condor</a> <span class="led" data-channel="UM/condor"></span></p>
-            <p><a href="umGanglia.html">UM/ganglia</a> <span class="led" data-channel="MSU/ganglia"></span></p>
-            <p><a href="msuCondor.html">MSU/condor</a> <span class="led" data-channel="UM/condor"></span></p>
-            <p><a href="msuGanglia.html">MSU/ganglia</a> <span class="led" data-channel="MSU/ganglia"></span></p>
+            <p><a href="umCondor.html">UM/condor</a> <span class="wp-led" data-channel="UM/condor"></span></p>
+            <p><a href="umGanglia.html">UM/ganglia</a> <span class="wp-led" data-channel="MSU/ganglia"></span></p>
+            <p><a href="msuCondor.html">MSU/condor</a> <span class="wp-led" data-channel="UM/condor"></span></p>
+            <p><a href="msuGanglia.html">MSU/ganglia</a> <span class="wp-led" data-channel="MSU/ganglia"></span></p>
         </div>
 
-
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/widgets/bubble.js"></script>
-        <script type="text/javascript" src="//diirt.aglt2.org/web-pods/js/widgets/led.js"></script>
-        <link rel="stylesheet" href="//diirt.aglt2.org/web-pods/js/widgets/led.css">
     </body>
 </html>
